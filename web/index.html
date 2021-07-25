@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type = "image/png" href="ico.png">
+
+    <script src="eel.js"></script>
+    <title>PyOWM</title>
+  </head>
+  <body>
+    
+    <div class="input">
+      <h1>PyOWM</h1>
+      <input id = "location" type="text" placeholder="Введите название города..."></input>
+      <button id = "btn" onclick="display_weather()">Узнать погоду</button>
+    </div>
+
+      <div class="container" id="section">
+        <h1 id="temp"></h1>
+        <h2 id="feels">Ощущается как:<br> <span id="temp2"></span></h2>
+        <table class="info_table">
+          <tr>
+            <th colspan="4">Информация</th>
+          </tr>
+          <tr>
+            <td>Ветер</td>
+            <td>Влажность</td>
+            <td>Облачность</td>
+            <td>Статус</td>
+          </tr>
+          <tr>
+            <td id = "wind"></td>
+            <td id="humi"></td>
+            <td id="cloud"></td>
+            <td id="status"></td>
+          </tr>
+        </table>
+      </div>
+    <script type="text/javascript">
+        async function display_weather(){
+          let place = document.getElementById("location").value;
+
+          let temp = await eel.getTemp(place)();
+          let feels = await eel.getFeels(place)();
+          let wind = await eel.getWind(place)();
+          let hum = await eel.getHum(place)();
+          let clouds = await eel.getClouds(place)();
+          let status = await eel.getStatus(place)();
+          document.getElementById('temp').innerHTML = temp;
+          document.getElementById('temp2').innerHTML = feels;
+          document.getElementById('wind').innerHTML = wind;
+          document.getElementById('humi').innerHTML = hum;
+          document.getElementById('cloud').innerHTML = clouds;
+          document.getElementById('status').innerHTML = status;
+
+
+          document.getElementById("section").style.display = "block";
+          window.scrollTo(0,document.body.scrollHeight);
+        }
+    </script>
+
+  </body>
+</html>

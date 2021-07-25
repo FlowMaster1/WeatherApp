@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h1{
+    color: #fff;
+    font-size: 50px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+#location{
+    width: 90%;
+    margin-top: 20px;
+    border: none;
+    height: 100px;
+    font-size: 30px;
+    border-radius: 50px;
+    text-align: center;
+    outline: none;
+    background: #ffffff;
+    opacity: 0.5;
+}
+
+#btn{
+    color: #fff;
+    font-size: 30px;
+    border: none;
+    width: 80%;
+    height: 90px;
+    border-radius: 50px;
+    margin-top: 50px;
+    background: #16BFFD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CB3066, #1b85ac);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CB3066, #2a83a3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: background .3s, color .3s;
+}
+
+#btn:hover{
+    color: #CB3066;
+    background: #fff;
+}
+
+#btn:active{
+    box-shadow:black 2px 2px 5px;
+}
+
+#info{
+    margin-top: 50px;
+}
+
+#section{
+    display: none;
+}
+.container{
+    
+    margin: 30px;
+    border: 1px solid;
+    border-color: #fff;
+    border-radius: 10px;
+}
+
+
+#temp{
+    font-size: 150px;
+    margin: 50px;
+    text-align: center;
+}
+
+#feels{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+#temp2{
+    font-size: 50px;
+}
+
+td,th{
+    border: 2px solid;
+    border-color: #fff;
+
+    padding: 10px;
+}
+.info_table{
+    font-size: 25px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: center;
+    color: #fff;
+    border: 1px solid;
+   
+    width: 90%;
+
+}
