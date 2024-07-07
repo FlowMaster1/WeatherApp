@@ -55,4 +55,4 @@ def getStatus(place):
 
 
 
-eel.start("index.html", size = (800,670))
+eel.start("index.html", size = (800,670),mode = 'default')
